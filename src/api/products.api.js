@@ -1,7 +1,9 @@
 import axios from "axios";
 const baseUrl = process.env.REACT_APP_API_BASE_URL; //"http://localhost:9000/.netlify/functions/api/base";
+
+// deverá ser alterado para uso do btoa
 const headersJson = {
-  Authorization: "Basic MTEyMzQ1Njc4OTA6MDk4NzY1NDMyMTE=",
+  Authorization: process.env.REACT_APP_HEADER_AUTHORIZATION,
   "Content-Type": "application/json",
 };
 // eslint-disable-next-line import/no-anonymous-default-export
